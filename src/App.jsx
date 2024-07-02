@@ -1,20 +1,25 @@
 import "./App.css"
+import { TwittweFollowCard } from "./TwitterFollowCard"
 
 export function App(){
     return (
-        <article>
-            <header>
-                <img src="https://unavatar.io/midudev" />
-                <div>
-                    <strong>Don Ricardo Ruiz</strong>
-                    <span>@jruiz2712</span>
-                </div>
-            </header>
-            <aside>
-                <button>
-                    seguir
-                </button>
-            </aside>
-        </article>
+        <section className="App">
+            <TwittweFollowCard
+            isFollowing 
+            userName="JoseRicardoRuiz27" name="Jose Ruiz"/>
+
+            <TwittweFollowCard
+            isFollowing={false}
+            userName="RAm" name="jruiz"/>
+
+            <TwittweFollowCard
+            isFollowing
+            userName="JoseRicardoRuiz27" name="Jose Ruiz"/>
+
+            <TwittweFollowCard
+            isFollowing 
+            userName="JoseRicardoRuiz27" name="Jose Ruiz"/>
+
+        </section>
     )
 }
