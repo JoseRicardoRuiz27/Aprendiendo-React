@@ -10,6 +10,7 @@ article header{
     align-items: center;
     gap: 3px;
 }
+
 article header div{
     display: flex;
     flex-direction: column;
@@ -17,6 +18,11 @@ article header div{
 
 article header span{
     opacity: .6;
+    font-size: 3rem;
+}
+
+article header strong{
+    font-size: 4rem;
 }
 
 article img{
