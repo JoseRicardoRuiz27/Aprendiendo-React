@@ -4,21 +4,24 @@ import { TwittweFollowCard } from "./TwitterFollowCard"
 export function App(){
     return (
         <section className="App">
-            <TwittweFollowCard
-            isFollowing 
-            userName="JoseRicardoRuiz27" name="Jose Ruiz"/>
+            <TwittweFollowCard 
+            userName="JoseRicardoRuiz27" >
+                JoRuiz
+            </TwittweFollowCard>
+
+            <TwittweFollowCard>
+              Ramiro Luca  
+            </TwittweFollowCard>
 
             <TwittweFollowCard
-            isFollowing={false}
-            userName="RAm" name="jruiz"/>
+            userName="JoseRicardoRuiz27" >
+                JoRuiz
+            </TwittweFollowCard>
 
             <TwittweFollowCard
-            isFollowing
-            userName="JoseRicardoRuiz27" name="Jose Ruiz"/>
-
-            <TwittweFollowCard
-            isFollowing 
-            userName="JoseRicardoRuiz27" name="Jose Ruiz"/>
+            userName="JoseRicardoRuiz27" >
+                JoRuiz
+            </TwittweFollowCard>
 
         </section>
     )
