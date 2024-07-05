@@ -5,7 +5,7 @@ export function App(){
     return (
         <section className="App">
             <TwittweFollowCard 
-            userName="JoseRicardoRuiz27" >
+            userName="JoseRicardoRuiz27" initialIsFollowing={true}>
                 JoRuiz
             </TwittweFollowCard>
 

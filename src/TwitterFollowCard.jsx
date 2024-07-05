@@ -1,11 +1,17 @@
 import "./TwitterFollowCard.css"
+import { useState } from "react"
 
-export function TwittweFollowCard({userName = `unknown`, children, isFollowing}) {
+export function TwittweFollowCard({userName = `unknown`, children, initialIsFollowing}) {
+    const  [isFollowing, setIsFollowing] = useState(initialIsFollowing)
     const ternearea = isFollowing ? `siguiendo` : `seguir`
     const buttonClassName = isFollowing ?
        `tw-followCard-button is-following`
      : `tw-followCard-button`
-    
+    const handleClick = () =>{
+        setIsFollowing(!isFollowing)
+    }
+
+
     return (
         <article className="tw-followCard">
             <header className="tw-followCard-header">
@@ -18,7 +24,7 @@ export function TwittweFollowCard({userName = `unknown`, children, isFollowing})
                 </div>
             </header>
             <aside>
-                <button className={buttonClassName}>
+                <button className={buttonClassName} onClick={handleClick}>
                     {ternearea}
                 </button>
             </aside>
