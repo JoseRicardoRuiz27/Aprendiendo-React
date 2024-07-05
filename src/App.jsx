@@ -1,28 +1,38 @@
-import "./App.css"
 import { TwittweFollowCard } from "./TwitterFollowCard"
 
-export function App(){
+const users = [
+    {
+        userName: `JoseRicardoRuiz27`,
+        name: `Jose Ricardo Ruiz`,
+        isFollowing: true
+    },
+    {
+        userName: `midudev`,
+        name: `Miguel Angel Duran`,
+        isFollowing: false
+    },
+    {
+        userName: `TMChein`,
+        name: `Tomas`,
+        isFollowing: false
+    }
+]
+
+export function App() {
     return (
         <section className="App">
-            <TwittweFollowCard 
-            userName="JoseRicardoRuiz27" initialIsFollowing={true}>
-                JoRuiz
-            </TwittweFollowCard>
-
-            <TwittweFollowCard>
-              Ramiro Luca  
-            </TwittweFollowCard>
-
-            <TwittweFollowCard
-            userName="JoseRicardoRuiz27" >
-                JoRuiz
-            </TwittweFollowCard>
-
-            <TwittweFollowCard
-            userName="JoseRicardoRuiz27" >
-                JoRuiz
-            </TwittweFollowCard>
-
+            {
+                users.map(users => {
+                    const { userName, name, isFollowing } = users
+                    return (
+                    <TwittweFollowCard
+                        key={userName}
+                        userName={userName} 
+                        initialIsFollowing={isFollowing}>
+                        {name}
+                    </TwittweFollowCard>)
+                })
+            }
         </section>
     )
 }

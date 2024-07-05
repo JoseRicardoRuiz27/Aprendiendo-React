@@ -25,7 +25,8 @@ export function TwittweFollowCard({userName = `unknown`, children, initialIsFoll
             </header>
             <aside>
                 <button className={buttonClassName} onClick={handleClick}>
-                    {ternearea}
+                    <span className="tw-followCard-text">{ternearea}</span>
+                    <span className="tw-followCard-stopFollow">Dejar de seguir</span>
                 </button>
             </aside>
         </article>
